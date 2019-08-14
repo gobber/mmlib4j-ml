@@ -1,0 +1,896 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../../../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../../../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../../../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Float32 &#8212; mmlib4j-ml 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Float64" href="Float64.html" />
+    <link rel="prev" title="Algebra" href="Algebra.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Float64.html" title="Float64"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Algebra.html" title="Algebra"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">mmlib4j-ml 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../packages.html" >Javadoc</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="package-index.html" accesskey="U">mmlib4j.models.datastruct</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar"><a href="
+    ../../../index.html" class="text-logo">mmlib4j-ml 0.0.1 documentation</a>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../packages.html">Javadoc</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../debug/package-index.html">mmlib4j.debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../features/package-index.html">mmlib4j.features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../files/package-index.html">mmlib4j.files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../package-index.html">mmlib4j.models</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="package-index.html">mmlib4j.models.datastruct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linear/package-index.html">mmlib4j.models.linear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../neural_network/package-index.html">mmlib4j.models.neural_network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../postprocessing/package-index.html">mmlib4j.models.postprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preprocessing/package-index.html">mmlib4j.models.preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../svm/package-index.html">mmlib4j.models.svm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../svm/kernels/package-index.html">mmlib4j.models.svm.kernels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../svr/package-index.html">mmlib4j.models.svr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer/package-index.html">mmlib4j.models.transfer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../primitives/package-index.html">mmlib4j.primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../targets/package-index.html">mmlib4j.targets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utils/package-index.html">mmlib4j.utils</a></li>
+</ul>
+</li>
+</ul>
+
+    
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">Float32</a><ul>
+<li><a class="reference internal" href="#fields">Fields</a><ul>
+<li><a class="reference internal" href="#instance">instance</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#t">T</a></li>
+<li><a class="reference internal" href="#tdot">Tdot</a></li>
+<li><a class="reference internal" href="#id1">Tdot</a></li>
+<li><a class="reference internal" href="#id2">Tdot</a></li>
+<li><a class="reference internal" href="#tdott">TdotT</a></li>
+<li><a class="reference internal" href="#id3">TdotT</a></li>
+<li><a class="reference internal" href="#id4">TdotT</a></li>
+<li><a class="reference internal" href="#argmax">argmax</a></li>
+<li><a class="reference internal" href="#argmin">argmin</a></li>
+<li><a class="reference internal" href="#biggerthen">biggerthen</a></li>
+<li><a class="reference internal" href="#clone">clone</a></li>
+<li><a class="reference internal" href="#colargmax">colargmax</a></li>
+<li><a class="reference internal" href="#colargmin">colargmin</a></li>
+<li><a class="reference internal" href="#column">column</a></li>
+<li><a class="reference internal" href="#create">create</a></li>
+<li><a class="reference internal" href="#div">div</a></li>
+<li><a class="reference internal" href="#id5">div</a></li>
+<li><a class="reference internal" href="#id6">div</a></li>
+<li><a class="reference internal" href="#divi">divi</a></li>
+<li><a class="reference internal" href="#dot">dot</a></li>
+<li><a class="reference internal" href="#id7">dot</a></li>
+<li><a class="reference internal" href="#id8">dot</a></li>
+<li><a class="reference internal" href="#dott">dotT</a></li>
+<li><a class="reference internal" href="#id9">dotT</a></li>
+<li><a class="reference internal" href="#id10">dotT</a></li>
+<li><a class="reference internal" href="#exp">exp</a></li>
+<li><a class="reference internal" href="#fill">fill</a></li>
+<li><a class="reference internal" href="#head">head</a></li>
+<li><a class="reference internal" href="#length">length</a></li>
+<li><a class="reference internal" href="#lessthen">lessthen</a></li>
+<li><a class="reference internal" href="#max">max</a></li>
+<li><a class="reference internal" href="#id11">max</a></li>
+<li><a class="reference internal" href="#id12">max</a></li>
+<li><a class="reference internal" href="#id13">max</a></li>
+<li><a class="reference internal" href="#meann">meann</a></li>
+<li><a class="reference internal" href="#min">min</a></li>
+<li><a class="reference internal" href="#id14">min</a></li>
+<li><a class="reference internal" href="#id15">min</a></li>
+<li><a class="reference internal" href="#id16">min</a></li>
+<li><a class="reference internal" href="#minus">minus</a></li>
+<li><a class="reference internal" href="#id17">minus</a></li>
+<li><a class="reference internal" href="#id18">minus</a></li>
+<li><a class="reference internal" href="#minusi">minusi</a></li>
+<li><a class="reference internal" href="#minusn">minusn</a></li>
+<li><a class="reference internal" href="#minusni">minusni</a></li>
+<li><a class="reference internal" href="#mul">mul</a></li>
+<li><a class="reference internal" href="#id19">mul</a></li>
+<li><a class="reference internal" href="#id20">mul</a></li>
+<li><a class="reference internal" href="#muli">muli</a></li>
+<li><a class="reference internal" href="#neg">neg</a></li>
+<li><a class="reference internal" href="#plus">plus</a></li>
+<li><a class="reference internal" href="#id21">plus</a></li>
+<li><a class="reference internal" href="#id22">plus</a></li>
+<li><a class="reference internal" href="#plusi">plusi</a></li>
+<li><a class="reference internal" href="#plusn">plusn</a></li>
+<li><a class="reference internal" href="#plusni">plusni</a></li>
+<li><a class="reference internal" href="#pow">pow</a></li>
+<li><a class="reference internal" href="#pow2">pow2</a></li>
+<li><a class="reference internal" href="#print">print</a></li>
+<li><a class="reference internal" href="#rand">rand</a></li>
+<li><a class="reference internal" href="#randn">randn</a></li>
+<li><a class="reference internal" href="#rdiv">rdiv</a></li>
+<li><a class="reference internal" href="#row">row</a></li>
+<li><a class="reference internal" href="#rowargmax">rowargmax</a></li>
+<li><a class="reference internal" href="#rowargmin">rowargmin</a></li>
+<li><a class="reference internal" href="#set">set</a></li>
+<li><a class="reference internal" href="#sigmoid">sigmoid</a></li>
+<li><a class="reference internal" href="#sqrt">sqrt</a></li>
+<li><a class="reference internal" href="#sum">sum</a></li>
+<li><a class="reference internal" href="#sumn">sumn</a></li>
+<li><a class="reference internal" href="#id23">sumn</a></li>
+<li><a class="reference internal" href="#id24">sumn</a></li>
+<li><a class="reference internal" href="#id25">sumn</a></li>
+<li><a class="reference internal" href="#tanh">tanh</a></li>
+<li><a class="reference internal" href="#tostring">toString</a></li>
+<li><a class="reference internal" href="#type">type</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../../../search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../../../index.html">Docs</a></li>
+              
+                <li><a href="../../../packages.html">Javadoc</a></li>
+              
+                <li><a href="package-index.html">mmlib4j.models.datastruct</a></li>
+              
+              <li>Float32</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="float32">
+<h1>Float32<a class="headerlink" href="#float32" title="Permalink to this headline">¶</a></h1>
+<dl class="type">
+<dt id="mmlib4j.models.datastruct.Float32">
+public class <code class="descname">Float32</code> extends <a class="reference internal" href="AbstractMatrix.html#mmlib4j.models.datastruct.AbstractMatrix" title="mmlib4j.models.datastruct.AbstractMatrix">AbstractMatrix</a>&lt;float[]&gt;<a class="headerlink" href="#mmlib4j.models.datastruct.Float32" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="section" id="fields">
+<h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="instance">
+<h3>instance<a class="headerlink" href="#instance" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.models.datastruct.Float32.instance">
+public static final <a class="reference internal" href="#mmlib4j.models.datastruct.Float32" title="mmlib4j.models.datastruct.Float32">Float32</a> <code class="descname">instance</code><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.instance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="t">
+<h3>T<a class="headerlink" href="#t" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.T(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">T</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.T(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="tdot">
+<h3>Tdot<a class="headerlink" href="#tdot" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.Tdot(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">Tdot</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.Tdot(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id1">
+<h3>Tdot<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.Tdot(Matrix, Number, Matrix)">
+ <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">Tdot</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.Tdot(Matrix, Number, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id2">
+<h3>Tdot<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.Tdot(Matrix, Number, Matrix, Matrix)">
+ <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">Tdot</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.Tdot(Matrix, Number, Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="tdott">
+<h3>TdotT<a class="headerlink" href="#tdott" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.TdotT(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">TdotT</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.TdotT(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id3">
+<h3>TdotT<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.TdotT(Matrix, Number, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">TdotT</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.TdotT(Matrix, Number, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id4">
+<h3>TdotT<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.TdotT(Matrix, Number, Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">TdotT</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.TdotT(Matrix, Number, Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="argmax">
+<h3>argmax<a class="headerlink" href="#argmax" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.argmax(Matrix, int)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">argmax</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> axis</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.argmax(Matrix, int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="argmin">
+<h3>argmin<a class="headerlink" href="#argmin" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.argmin(Matrix, int)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">argmin</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> axis</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.argmin(Matrix, int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="biggerthen">
+<h3>biggerthen<a class="headerlink" href="#biggerthen" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.biggerthen(Matrix, Number, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">biggerthen</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> t</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.biggerthen(Matrix, Number, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="clone">
+<h3>clone<a class="headerlink" href="#clone" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.clone(float[])">
+public float[] <code class="descname">clone</code><span class="sig-paren">(</span>float[]<em> A</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.clone(float[])" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="colargmax">
+<h3>colargmax<a class="headerlink" href="#colargmax" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.colargmax(Matrix, int, int, Matrix)">
+ <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">colargmax</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> r</em>, int<em> c</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.colargmax(Matrix, int, int, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="colargmin">
+<h3>colargmin<a class="headerlink" href="#colargmin" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.colargmin(Matrix, int, int, Matrix)">
+ <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">colargmin</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> r</em>, int<em> c</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.colargmin(Matrix, int, int, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="column">
+<h3>column<a class="headerlink" href="#column" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.column(Matrix, int, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">column</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> column</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.column(Matrix, int, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="create">
+<h3>create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.create(int, int)">
+public float[] <code class="descname">create</code><span class="sig-paren">(</span>int<em> numRows</em>, int<em> numColumns</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.create(int, int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="div">
+<h3>div<a class="headerlink" href="#div" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.div(Matrix, Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">div</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.div(Matrix, Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id5">
+<h3>div<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.div(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">div</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.div(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id6">
+<h3>div<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.div(Matrix, Number, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">div</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.div(Matrix, Number, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="divi">
+<h3>divi<a class="headerlink" href="#divi" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.divi(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">divi</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.divi(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="dot">
+<h3>dot<a class="headerlink" href="#dot" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.dot(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">dot</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.dot(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id7">
+<h3>dot<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.dot(Matrix, Number, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">dot</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.dot(Matrix, Number, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id8">
+<h3>dot<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.dot(Matrix, Number, Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">dot</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.dot(Matrix, Number, Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="dott">
+<h3>dotT<a class="headerlink" href="#dott" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.dotT(Matrix, Matrix)">
+ <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">dotT</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.dotT(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id9">
+<h3>dotT<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.dotT(Matrix, Number, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">dotT</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.dotT(Matrix, Number, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id10">
+<h3>dotT<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.dotT(Matrix, Number, Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">dotT</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.dotT(Matrix, Number, Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="exp">
+<h3>exp<a class="headerlink" href="#exp" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.exp(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">exp</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.exp(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="fill">
+<h3>fill<a class="headerlink" href="#fill" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.fill(Matrix, Number)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">fill</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> source</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.fill(Matrix, Number)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="head">
+<h3>head<a class="headerlink" href="#head" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.head(Matrix, int, int, String)">
+public void <code class="descname">head</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> source</em>, int<em> numRows</em>, int<em> numColumns</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a><em> format</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.head(Matrix, int, int, String)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="length">
+<h3>length<a class="headerlink" href="#length" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.length(float[])">
+public int <code class="descname">length</code><span class="sig-paren">(</span>float[]<em> values</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.length(float[])" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="lessthen">
+<h3>lessthen<a class="headerlink" href="#lessthen" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.lessthen(Matrix, Number, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">lessthen</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> t</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.lessthen(Matrix, Number, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="max">
+<h3>max<a class="headerlink" href="#max" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.max(Matrix, int, int, Matrix)">
+ <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">max</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> r</em>, int<em> c</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.max(Matrix, int, int, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id11">
+<h3>max<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.max(Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">max</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.max(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id12">
+<h3>max<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.max(Matrix, int)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">max</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> axis</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.max(Matrix, int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id13">
+<h3>max<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.max(Matrix, Number, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">max</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.max(Matrix, Number, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="meann">
+<h3>meann<a class="headerlink" href="#meann" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.meann(Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">meann</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.meann(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="min">
+<h3>min<a class="headerlink" href="#min" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.min(Matrix, int, int, Matrix)">
+ <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">min</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> r</em>, int<em> c</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.min(Matrix, int, int, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id14">
+<h3>min<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.min(Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">min</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.min(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id15">
+<h3>min<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.min(Matrix, int)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">min</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> axis</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.min(Matrix, int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id16">
+<h3>min<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.min(Matrix, Number, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">min</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.min(Matrix, Number, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="minus">
+<h3>minus<a class="headerlink" href="#minus" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.minus(Matrix, Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">minus</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.minus(Matrix, Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id17">
+<h3>minus<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.minus(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">minus</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.minus(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id18">
+<h3>minus<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.minus(Matrix, Number, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">minus</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.minus(Matrix, Number, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="minusi">
+<h3>minusi<a class="headerlink" href="#minusi" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.minusi(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">minusi</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.minusi(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="minusn">
+<h3>minusn<a class="headerlink" href="#minusn" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.minusn(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">minusn</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.minusn(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="minusni">
+<h3>minusni<a class="headerlink" href="#minusni" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.minusni(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">minusni</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.minusni(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="mul">
+<h3>mul<a class="headerlink" href="#mul" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.mul(Matrix, Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">mul</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.mul(Matrix, Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id19">
+<h3>mul<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.mul(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">mul</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.mul(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id20">
+<h3>mul<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.mul(Matrix, Number, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">mul</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.mul(Matrix, Number, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="muli">
+<h3>muli<a class="headerlink" href="#muli" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.muli(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">muli</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.muli(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="neg">
+<h3>neg<a class="headerlink" href="#neg" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.neg(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">neg</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.neg(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="plus">
+<h3>plus<a class="headerlink" href="#plus" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.plus(Matrix, Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">plus</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.plus(Matrix, Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id21">
+<h3>plus<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.plus(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">plus</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.plus(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id22">
+<h3>plus<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.plus(Matrix, Number, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">plus</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.plus(Matrix, Number, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="plusi">
+<h3>plusi<a class="headerlink" href="#plusi" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.plusi(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">plusi</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.plusi(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="plusn">
+<h3>plusn<a class="headerlink" href="#plusn" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.plusn(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">plusn</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.plusn(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="plusni">
+<h3>plusni<a class="headerlink" href="#plusni" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.plusni(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">plusni</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.plusni(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="pow">
+<h3>pow<a class="headerlink" href="#pow" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.pow(Matrix, Number, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">pow</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> exponent</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.pow(Matrix, Number, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="pow2">
+<h3>pow2<a class="headerlink" href="#pow2" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.pow2(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">pow2</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.pow2(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="print">
+<h3>print<a class="headerlink" href="#print" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.print(Matrix)">
+public void <code class="descname">print</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> source</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.print(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="rand">
+<h3>rand<a class="headerlink" href="#rand" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.rand(Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">rand</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.rand(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="randn">
+<h3>randn<a class="headerlink" href="#randn" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.randn(Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">randn</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.randn(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="rdiv">
+<h3>rdiv<a class="headerlink" href="#rdiv" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.rdiv(Matrix, Number, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">rdiv</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.rdiv(Matrix, Number, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="row">
+<h3>row<a class="headerlink" href="#row" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.row(Matrix, int, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">row</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> row</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.row(Matrix, int, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="rowargmax">
+<h3>rowargmax<a class="headerlink" href="#rowargmax" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.rowargmax(Matrix, int, int, Matrix)">
+ <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">rowargmax</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> r</em>, int<em> c</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.rowargmax(Matrix, int, int, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="rowargmin">
+<h3>rowargmin<a class="headerlink" href="#rowargmin" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.rowargmin(Matrix, int, int, Matrix)">
+ <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">rowargmin</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> r</em>, int<em> c</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.rowargmin(Matrix, int, int, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="set">
+<h3>set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.set(Matrix, int, int, Number)">
+public void <code class="descname">set</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> source</em>, int<em> row</em>, int<em> col</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="java.lang.Number">Number</a><em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.set(Matrix, int, int, Number)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="sigmoid">
+<h3>sigmoid<a class="headerlink" href="#sigmoid" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.sigmoid(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">sigmoid</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.sigmoid(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="sqrt">
+<h3>sqrt<a class="headerlink" href="#sqrt" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.sqrt(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">sqrt</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.sqrt(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="sum">
+<h3>sum<a class="headerlink" href="#sum" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.sum(Matrix, int, int, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">sum</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> r</em>, int<em> c</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.sum(Matrix, int, int, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="sumn">
+<h3>sumn<a class="headerlink" href="#sumn" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.sumn(Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">sumn</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.sumn(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id23">
+<h3>sumn<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.sumn(Matrix, int)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">sumn</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> axis</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.sumn(Matrix, int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id24">
+<h3>sumn<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.sumn(Matrix, int, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">sumn</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> axis</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.sumn(Matrix, int, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id25">
+<h3>sumn<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.sumn(Matrix, int, Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">sumn</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, int<em> axis</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> B</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.sumn(Matrix, int, Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="tanh">
+<h3>tanh<a class="headerlink" href="#tanh" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.tanh(Matrix, Matrix)">
+public <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt; <code class="descname">tanh</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> A</em>, <a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.tanh(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="tostring">
+<h3>toString<a class="headerlink" href="#tostring" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.toString(Matrix, String)">
+public <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">toString</code><span class="sig-paren">(</span><a class="reference internal" href="Matrix.html#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a>&lt;float[]&gt;<em> source</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a><em> separator</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.toString(Matrix, String)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="type">
+<h3>type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Float32.type()">
+ <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="java.lang.Class">Class</a>&lt;float[]&gt; <code class="descname">type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Float32.type()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="Algebra.html" title="previous chapter (use the left arrow)">Algebra</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="Float64.html" title="next chapter (use the right arrow)">Float64</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Float64.html" title="Float64"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Algebra.html" title="Algebra"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">mmlib4j-ml 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../packages.html" >Javadoc</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="package-index.html" >mmlib4j.models.datastruct</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../../../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2019, Charles Ferreira Gobber. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

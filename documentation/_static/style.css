@@ -1,0 +1,12 @@
+.wy-nav-content {
+    max-width: none; !important
+}
+
+.mf { color:#333; !important } /* Literal.Number.Float */
+.mh { color:#333; !important} /* Literal.Number.Hex */
+.mi { color:#333; !important} /* Literal.Number.Integer */
+.mo { color:#333; !important} /* Literal.Number.Oct */
+
+p {
+     text-align:justify;
+}
