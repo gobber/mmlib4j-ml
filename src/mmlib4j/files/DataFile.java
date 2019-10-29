@@ -12,8 +12,9 @@ public class DataFile {
 		return files;
 	}
 
-	public void setFiles(List<File> files) {
+	public DataFile setFiles(List<File> files) {
 		this.files = files;
+		return this;
 	}			
 	
 	public File filter(String pattern) {		

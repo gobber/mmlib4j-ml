@@ -20,6 +20,8 @@ public class LinearSVR implements Models {
     private Matrix intercepts;
     private Scaler scaler;    
     
+    public LinearSVR() {}
+    
 	public LinearSVR(JsonObject jsonObject) {
 		load(jsonObject);
 	}

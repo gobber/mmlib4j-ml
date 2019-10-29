@@ -1,0 +1,2682 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../../../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../../../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../../../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Matrix &#8212; mmlib4j-ml 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="NativeOperations" href="NativeOperations.html" />
+    <link rel="prev" title="JavaOperations" href="JavaOperations.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="NativeOperations.html" title="NativeOperations"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="JavaOperations.html" title="JavaOperations"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">mmlib4j-ml 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="package-index.html" accesskey="U">mmlib4j.models.datastruct</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar"><a href="
+    ../../../index.html" class="text-logo">mmlib4j-ml 0.0.1 documentation</a>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples.html">Examples</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../debug/package-index.html">mmlib4j.debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/package-index.html">mmlib4j.files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../package-index.html">mmlib4j.models</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="package-index.html">mmlib4j.models.datastruct</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="JavaOperations.html">JavaOperations</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NativeOperations.html">NativeOperations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Operations.html">Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimpleBlas.html">SimpleBlas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../linear/package-index.html">mmlib4j.models.linear</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../neural_network/package-index.html">mmlib4j.models.neural_network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../postprocessing/package-index.html">mmlib4j.models.postprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preprocessing/package-index.html">mmlib4j.models.preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../svm/package-index.html">mmlib4j.models.svm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../svm/kernels/package-index.html">mmlib4j.models.svm.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../svr/package-index.html">mmlib4j.models.svr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../transfer/package-index.html">mmlib4j.models.transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../options/package-index.html">mmlib4j.options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utils/package-index.html">mmlib4j.utils</a></li>
+</ul>
+
+    
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">Matrix</a><ul>
+<li><a class="reference internal" href="#constructors">Constructors</a><ul>
+<li><a class="reference internal" href="#id1">Matrix</a></li>
+<li><a class="reference internal" href="#id2">Matrix</a></li>
+<li><a class="reference internal" href="#id4">Matrix</a></li>
+<li><a class="reference internal" href="#id6">Matrix</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#t">T</a></li>
+<li><a class="reference internal" href="#id8">T</a></li>
+<li><a class="reference internal" href="#tdot">Tdot</a></li>
+<li><a class="reference internal" href="#id9">Tdot</a></li>
+<li><a class="reference internal" href="#id10">Tdot</a></li>
+<li><a class="reference internal" href="#id11">Tdot</a></li>
+<li><a class="reference internal" href="#tdott">TdotT</a></li>
+<li><a class="reference internal" href="#id12">TdotT</a></li>
+<li><a class="reference internal" href="#id13">TdotT</a></li>
+<li><a class="reference internal" href="#id14">TdotT</a></li>
+<li><a class="reference internal" href="#argmax">argmax</a></li>
+<li><a class="reference internal" href="#argmin">argmin</a></li>
+<li><a class="reference internal" href="#biggerthen">biggerthen</a></li>
+<li><a class="reference internal" href="#id15">biggerthen</a></li>
+<li><a class="reference internal" href="#biggertheni">biggertheni</a></li>
+<li><a class="reference internal" href="#column">column</a></li>
+<li><a class="reference internal" href="#id16">column</a></li>
+<li><a class="reference internal" href="#copy">copy</a></li>
+<li><a class="reference internal" href="#div">div</a></li>
+<li><a class="reference internal" href="#id17">div</a></li>
+<li><a class="reference internal" href="#id18">div</a></li>
+<li><a class="reference internal" href="#id19">div</a></li>
+<li><a class="reference internal" href="#id20">div</a></li>
+<li><a class="reference internal" href="#id21">div</a></li>
+<li><a class="reference internal" href="#divi">divi</a></li>
+<li><a class="reference internal" href="#id22">divi</a></li>
+<li><a class="reference internal" href="#dot">dot</a></li>
+<li><a class="reference internal" href="#id23">dot</a></li>
+<li><a class="reference internal" href="#id24">dot</a></li>
+<li><a class="reference internal" href="#id25">dot</a></li>
+<li><a class="reference internal" href="#dott">dotT</a></li>
+<li><a class="reference internal" href="#id26">dotT</a></li>
+<li><a class="reference internal" href="#id27">dotT</a></li>
+<li><a class="reference internal" href="#id28">dotT</a></li>
+<li><a class="reference internal" href="#exp">exp</a></li>
+<li><a class="reference internal" href="#id29">exp</a></li>
+<li><a class="reference internal" href="#expi">expi</a></li>
+<li><a class="reference internal" href="#fill">fill</a></li>
+<li><a class="reference internal" href="#get">get</a></li>
+<li><a class="reference internal" href="#id30">get</a></li>
+<li><a class="reference internal" href="#getdata">getData</a></li>
+<li><a class="reference internal" href="#getseparator">getSeparator</a></li>
+<li><a class="reference internal" href="#head">head</a></li>
+<li><a class="reference internal" href="#id31">head</a></li>
+<li><a class="reference internal" href="#id32">head</a></li>
+<li><a class="reference internal" href="#id33">head</a></li>
+<li><a class="reference internal" href="#iscolvector">isColVector</a></li>
+<li><a class="reference internal" href="#ismatrix">isMatrix</a></li>
+<li><a class="reference internal" href="#isrowvector">isRowVector</a></li>
+<li><a class="reference internal" href="#isscalar">isScalar</a></li>
+<li><a class="reference internal" href="#length">length</a></li>
+<li><a class="reference internal" href="#lessthen">lessthen</a></li>
+<li><a class="reference internal" href="#id34">lessthen</a></li>
+<li><a class="reference internal" href="#lesstheni">lesstheni</a></li>
+<li><a class="reference internal" href="#max">max</a></li>
+<li><a class="reference internal" href="#id35">max</a></li>
+<li><a class="reference internal" href="#id36">max</a></li>
+<li><a class="reference internal" href="#maxi">maxi</a></li>
+<li><a class="reference internal" href="#mean">mean</a></li>
+<li><a class="reference internal" href="#id37">mean</a></li>
+<li><a class="reference internal" href="#id38">mean</a></li>
+<li><a class="reference internal" href="#min">min</a></li>
+<li><a class="reference internal" href="#id39">min</a></li>
+<li><a class="reference internal" href="#id40">min</a></li>
+<li><a class="reference internal" href="#minus">minus</a></li>
+<li><a class="reference internal" href="#id41">minus</a></li>
+<li><a class="reference internal" href="#id42">minus</a></li>
+<li><a class="reference internal" href="#id43">minus</a></li>
+<li><a class="reference internal" href="#id44">minus</a></li>
+<li><a class="reference internal" href="#id45">minus</a></li>
+<li><a class="reference internal" href="#minusi">minusi</a></li>
+<li><a class="reference internal" href="#id46">minusi</a></li>
+<li><a class="reference internal" href="#mul">mul</a></li>
+<li><a class="reference internal" href="#id47">mul</a></li>
+<li><a class="reference internal" href="#id48">mul</a></li>
+<li><a class="reference internal" href="#id49">mul</a></li>
+<li><a class="reference internal" href="#id50">mul</a></li>
+<li><a class="reference internal" href="#id51">mul</a></li>
+<li><a class="reference internal" href="#muli">muli</a></li>
+<li><a class="reference internal" href="#id52">muli</a></li>
+<li><a class="reference internal" href="#neg">neg</a></li>
+<li><a class="reference internal" href="#id53">neg</a></li>
+<li><a class="reference internal" href="#id54">neg</a></li>
+<li><a class="reference internal" href="#id55">neg</a></li>
+<li><a class="reference internal" href="#negi">negi</a></li>
+<li><a class="reference internal" href="#numcolumns">numColumns</a></li>
+<li><a class="reference internal" href="#id56">numColumns</a></li>
+<li><a class="reference internal" href="#numrows">numRows</a></li>
+<li><a class="reference internal" href="#id57">numRows</a></li>
+<li><a class="reference internal" href="#one">one</a></li>
+<li><a class="reference internal" href="#ones">ones</a></li>
+<li><a class="reference internal" href="#plus">plus</a></li>
+<li><a class="reference internal" href="#id58">plus</a></li>
+<li><a class="reference internal" href="#id59">plus</a></li>
+<li><a class="reference internal" href="#id60">plus</a></li>
+<li><a class="reference internal" href="#id61">plus</a></li>
+<li><a class="reference internal" href="#id62">plus</a></li>
+<li><a class="reference internal" href="#plusi">plusi</a></li>
+<li><a class="reference internal" href="#id63">plusi</a></li>
+<li><a class="reference internal" href="#pow">pow</a></li>
+<li><a class="reference internal" href="#id64">pow</a></li>
+<li><a class="reference internal" href="#pow2">pow2</a></li>
+<li><a class="reference internal" href="#id65">pow2</a></li>
+<li><a class="reference internal" href="#id66">pow2</a></li>
+<li><a class="reference internal" href="#id67">pow2</a></li>
+<li><a class="reference internal" href="#pow2i">pow2i</a></li>
+<li><a class="reference internal" href="#powi">powi</a></li>
+<li><a class="reference internal" href="#print">print</a></li>
+<li><a class="reference internal" href="#rand">rand</a></li>
+<li><a class="reference internal" href="#id68">rand</a></li>
+<li><a class="reference internal" href="#randn">randn</a></li>
+<li><a class="reference internal" href="#randnorm">randnorm</a></li>
+<li><a class="reference internal" href="#row">row</a></li>
+<li><a class="reference internal" href="#id69">row</a></li>
+<li><a class="reference internal" href="#set">set</a></li>
+<li><a class="reference internal" href="#id70">set</a></li>
+<li><a class="reference internal" href="#setdata">setData</a></li>
+<li><a class="reference internal" href="#setseparator">setSeparator</a></li>
+<li><a class="reference internal" href="#shape">shape</a></li>
+<li><a class="reference internal" href="#sigmoid">sigmoid</a></li>
+<li><a class="reference internal" href="#sigmoidi">sigmoidi</a></li>
+<li><a class="reference internal" href="#sqrt">sqrt</a></li>
+<li><a class="reference internal" href="#id71">sqrt</a></li>
+<li><a class="reference internal" href="#sqrti">sqrti</a></li>
+<li><a class="reference internal" href="#std">std</a></li>
+<li><a class="reference internal" href="#sum">sum</a></li>
+<li><a class="reference internal" href="#id72">sum</a></li>
+<li><a class="reference internal" href="#id73">sum</a></li>
+<li><a class="reference internal" href="#tanh">tanh</a></li>
+<li><a class="reference internal" href="#id74">tanh</a></li>
+<li><a class="reference internal" href="#tanhi">tanhi</a></li>
+<li><a class="reference internal" href="#tostring">toString</a></li>
+<li><a class="reference internal" href="#var">var</a></li>
+<li><a class="reference internal" href="#zero">zero</a></li>
+<li><a class="reference internal" href="#zeros">zeros</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../../../search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../../../index.html">Docs</a></li>
+              
+                <li><a href="package-index.html">mmlib4j.models.datastruct</a></li>
+              
+              <li>Matrix</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="matrix">
+<h1>Matrix<a class="headerlink" href="#matrix" title="Permalink to this headline">¶</a></h1>
+<dl class="type">
+<dt id="mmlib4j.models.datastruct.Matrix">
+public class <code class="descname">Matrix</code><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>A matrix is a rectangular array of numbers arranged by rows and columns. Formally, a matrix can be defined as <span class="math notranslate nohighlight">\(A \in \mathbb{R}^{m\times n}\)</span> where <span class="math notranslate nohighlight">\(m\)</span> is the number of rows and <span class="math notranslate nohighlight">\(n\)</span> is the number of columns. We access a value in a matrix as <span class="math notranslate nohighlight">\(A_{i, j}\)</span> where <span class="math notranslate nohighlight">\(0 \leq i \leq m\)</span> and <span class="math notranslate nohighlight">\(0 \leq j \leq n\)</span>. We say that <span class="math notranslate nohighlight">\(A\)</span> is a row vector if <span class="math notranslate nohighlight">\(m=1\)</span> and that <span class="math notranslate nohighlight">\(A\)</span> is a column vector when <span class="math notranslate nohighlight">\(n=1\)</span>. This is not the usual definition of a vector, but this simplifies the method definition, since internally they are defined with the Matrix class.</p>
+<p>The Matrix is stored in column major scheme (see <a class="reference external" href="https://en.wikipedia.org/wiki/Row-_and_column-major_order">here</a>). This is a decision project that makes possible to apply native code avoiding memory copy since we use <a class="reference external" href="http://www.netlib.org/blas/">BLAS</a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body">Charles Ferreira Gobber</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See also:</strong> <a class="reference internal" href="Operations.html#mmlib4j.models.datastruct.Operations" title="mmlib4j.models.datastruct.Operations"><code class="xref java java-ref docutils literal notranslate"><span class="pre">Operations</span></code></a>, <a class="reference internal" href="NativeOperations.html#mmlib4j.models.datastruct.NativeOperations" title="mmlib4j.models.datastruct.NativeOperations"><code class="xref java java-ref docutils literal notranslate"><span class="pre">NativeOperations</span></code></a>, <a class="reference internal" href="JavaOperations.html#mmlib4j.models.datastruct.JavaOperations" title="mmlib4j.models.datastruct.JavaOperations"><code class="xref java java-ref docutils literal notranslate"><span class="pre">JavaOperations</span></code></a>, <a class="reference internal" href="SimpleBlas.html#mmlib4j.models.datastruct.SimpleBlas" title="mmlib4j.models.datastruct.SimpleBlas"><code class="xref java java-ref docutils literal notranslate"><span class="pre">SimpleBlas</span></code></a></p>
+</dd></dl>
+
+<div class="section" id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Matrix<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="constructor">
+<dt id="mmlib4j.models.datastruct.Matrix.Matrix(int, int)">
+public <code class="descname">Matrix</code><span class="sig-paren">(</span>int<em> numRows</em>, int<em> numColumns</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.Matrix(int, int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constructor for Matrix.class. This allocate a Matrix with numRows by numColumns size.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>numRows</strong> – Number of rows of the Matrix.</li>
+<li><strong>numColumns</strong> – Number of columns of the Matrix.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id2">
+<h3>Matrix<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<dl class="constructor">
+<dt id="mmlib4j.models.datastruct.Matrix.Matrix(double[], int, int)">
+public <code class="descname">Matrix</code><span class="sig-paren">(</span>double[]<em> values</em>, int<em> numRows</em>, int<em> numColumns</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.Matrix(double[], int, int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Another constructor for Matrix.class. This allocate a Matrix with numRows by numColumns size. This receives a vector stored in column major scheme (see <a class="reference external" href="https://en.wikipedia.org/wiki/Row-_and_column-major_order">here</a>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>values</strong> – A vector of double values.</li>
+<li><strong>numRows</strong> – Number of rows of the Matrix.</li>
+<li><strong>numColumns</strong> – Number of columns of the Matrix.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id4">
+<h3>Matrix<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<dl class="constructor">
+<dt id="mmlib4j.models.datastruct.Matrix.Matrix(double[], int, int, boolean)">
+public <code class="descname">Matrix</code><span class="sig-paren">(</span>double[]<em> values</em>, int<em> numRows</em>, int<em> numColumns</em>, boolean<em> deep</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.Matrix(double[], int, int, boolean)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Another constructor for Matrix.class. This allocate a Matrix with numRows by numColumns size. This receives a vector stored in column major scheme (see <a class="reference external" href="https://en.wikipedia.org/wiki/Row-_and_column-major_order">here</a>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>values</strong> – A vector of double values.</li>
+<li><strong>numRows</strong> – Number of rows of the Matrix.</li>
+<li><strong>numColumns</strong> – Number of columns of the Matrix.</li>
+<li><strong>deep</strong> – A boolean parameter, if true the values vector is cloned, is not cloned otherwise.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id6">
+<h3>Matrix<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<dl class="constructor">
+<dt id="mmlib4j.models.datastruct.Matrix.Matrix(double[][])">
+public <code class="descname">Matrix</code><span class="sig-paren">(</span>double[][]<em> values</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.Matrix(double[][])" title="Permalink to this definition">¶</a></dt>
+<dd><p>Another constructor for Matrix.class. This method copies the Matrix values[][]. This stores a vector in column major scheme (see <a class="reference external" href="https://en.wikipedia.org/wiki/Row-_and_column-major_order">here</a>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>values</strong> – A Matrix of double values.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="t">
+<h3>T<a class="headerlink" href="#t" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.T()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">T</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.T()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the transposition of the Matrix, i.e., <span class="math notranslate nohighlight">\(C=A^T\)</span>, where <span class="math notranslate nohighlight">\(C\)</span> is allocated internally.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A Matrix <span class="math notranslate nohighlight">\(C\)</span> that is <span class="math notranslate nohighlight">\(A^T\)</span>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id8">
+<h3>T<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.T(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">T</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.T(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the transposition of the Matrix, i.e., <span class="math notranslate nohighlight">\(C=A^T\)</span>, where <span class="math notranslate nohighlight">\(C\)</span> is passed by parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>A</strong> – Matrix <span class="math notranslate nohighlight">\(C\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A Matrix <span class="math notranslate nohighlight">\(C\)</span> that is <span class="math notranslate nohighlight">\(A^T\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="tdot">
+<h3>Tdot<a class="headerlink" href="#tdot" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.Tdot(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">Tdot</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.Tdot(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id9">
+<h3>Tdot<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.Tdot(Matrix, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">Tdot</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.Tdot(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id10">
+<h3>Tdot<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.Tdot(double, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">Tdot</code><span class="sig-paren">(</span>double<em> value</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.Tdot(double, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id11">
+<h3>Tdot<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.Tdot(double, Matrix, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">Tdot</code><span class="sig-paren">(</span>double<em> value</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.Tdot(double, Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="tdott">
+<h3>TdotT<a class="headerlink" href="#tdott" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.TdotT(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">TdotT</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.TdotT(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id12">
+<h3>TdotT<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.TdotT(Matrix, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">TdotT</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.TdotT(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id13">
+<h3>TdotT<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.TdotT(double, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">TdotT</code><span class="sig-paren">(</span>double<em> value</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.TdotT(double, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id14">
+<h3>TdotT<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.TdotT(double, Matrix, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">TdotT</code><span class="sig-paren">(</span>double<em> value</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.TdotT(double, Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="argmax">
+<h3>argmax<a class="headerlink" href="#argmax" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.argmax(int)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">argmax</code><span class="sig-paren">(</span>int<em> axis</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.argmax(int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="argmin">
+<h3>argmin<a class="headerlink" href="#argmin" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.argmin(int)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">argmin</code><span class="sig-paren">(</span>int<em> axis</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.argmin(int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="biggerthen">
+<h3>biggerthen<a class="headerlink" href="#biggerthen" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.biggerthen(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">biggerthen</code><span class="sig-paren">(</span>double<em> t</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.biggerthen(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns a binary Matrix of the following comparison:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\forall (r, c), C_{r, c} = \begin{cases} 1,&amp; \text{ if } A_{r, c} &gt; t,\\ 0,&amp; \text{ otherwise }\\ \end{cases}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(t \in \mathbb{R}\)</span> is a threshold and <span class="math notranslate nohighlight">\(C\)</span> is a Matrix allocated inside the method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t</strong> – The value of threshold.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> with the binary comparison.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id15">
+<h3>biggerthen<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.biggerthen(double, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">biggerthen</code><span class="sig-paren">(</span>double<em> t</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.biggerthen(double, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns a binary Matrix of the following comparison:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\forall (r, c), C_{r, c} = \begin{cases} 1,&amp; \text{ if } A_{r, c} &gt; t,\\ 0,&amp; \text{ otherwise }\\ \end{cases}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(t \in \mathbb{R}\)</span> is a threshold and <span class="math notranslate nohighlight">\(C\)</span> is a Matrix passed by parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t</strong> – The value of threshold.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> with the binary comparison.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="biggertheni">
+<h3>biggertheni<a class="headerlink" href="#biggertheni" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.biggertheni(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">biggertheni</code><span class="sig-paren">(</span>double<em> t</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.biggertheni(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns a in place binary Matrix of the following comparison:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\forall (r, c), A_{r, c} = \begin{cases} 1,&amp; \text{ if } A_{r, c} &gt; t,\\ 0,&amp; \text{ otherwise }\\ \end{cases}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(t \in \mathbb{R}\)</span> is a threshold.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t</strong> – The value of threshold.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> with the binary comparison.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="column">
+<h3>column<a class="headerlink" href="#column" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.column(int)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">column</code><span class="sig-paren">(</span>int<em> column</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.column(int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns a given column of the Matrix. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[\forall r=1,\ldots,m,~ C_{r,c}=A_{r,c},\]</div>
+<p>where <span class="math notranslate nohighlight">\(1\leq c\leq n\)</span> is the column and <span class="math notranslate nohighlight">\(C\)</span> is a Matrix allocated inside the method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>column</strong> – A column of <span class="math notranslate nohighlight">\(A\)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A column Matrix (or a vector) of a given column.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id16">
+<h3>column<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.column(int, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">column</code><span class="sig-paren">(</span>int<em> column</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.column(int, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns a given column of the Matrix, but it writes the values in the Matrix <span class="math notranslate nohighlight">\(C\)</span>. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[\forall r=1,\ldots,m,~ C_{r,c}=A_{r,c},\]</div>
+<p>where <span class="math notranslate nohighlight">\(1\leq c\leq n\)</span> is the column and <span class="math notranslate nohighlight">\(C\)</span> is a Matrix passed by parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>column</strong> – A column of <span class="math notranslate nohighlight">\(A\)</span></li>
+<li><strong>C</strong> – A Matrix to store the column of <span class="math notranslate nohighlight">\(A\)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> filled by the given column of <span class="math notranslate nohighlight">\(A\)</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="copy">
+<h3>copy<a class="headerlink" href="#copy" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.copy()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.copy()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method copies the Matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Returns a copy of the instantiated Matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="div">
+<h3>div<a class="headerlink" href="#div" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.div(int, int, double)">
+public void <code class="descname">div</code><span class="sig-paren">(</span>int<em> row</em>, int<em> col</em>, double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.div(int, int, double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method divides the value stored in Matrix position (row, col) by a value passed for parameter. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A_{r,c}=\frac{A_{r, c}}{v},\]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is the number of rows, <span class="math notranslate nohighlight">\(c\)</span> is the number of columns and <span class="math notranslate nohighlight">\(v\)</span> is the value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>row</strong> – A valid row of the Matrix.</li>
+<li><strong>col</strong> – A valid col of the Matrix.</li>
+<li><strong>value</strong> – A value to divides the value stored in (row, col).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id17">
+<h3>div<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.div(int, double)">
+public void <code class="descname">div</code><span class="sig-paren">(</span>int<em> pos</em>, double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.div(int, double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method divides the value stored in Matrix position (row, col) by a value passed for parameter. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A_{r,c}=\frac{A_{r, c}}{v},\]</div>
+<p>where <span class="math notranslate nohighlight">\(r=\lfloor \frac{pos}{m} \rfloor\)</span> is the number of rows and <span class="math notranslate nohighlight">\(c=(pos\equiv m)\)</span> is the number of columns.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pos</strong> – A valid position of the Matrix.</li>
+<li><strong>value</strong> – A value to divides the value stored in (row, col).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id18">
+<h3>div<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.div(Matrix, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">div</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.div(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the point wise division between two Matrix. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = \frac{A}{B}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (passed by parameter) is the point wise division between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>B</strong> – A Matrix <span class="math notranslate nohighlight">\(B\)</span> to divide with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+<li><strong>C</strong> – A Matrix <span class="math notranslate nohighlight">\(C\)</span> to store the point wise division between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the point wise division between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id19">
+<h3>div<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.div(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">div</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.div(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the point wise division between two Matrix. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = \frac{A}{B}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (allocated internally) is the point wise division between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>B</strong> – A Matrix <span class="math notranslate nohighlight">\(B\)</span> to divide with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the point wise division between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id20">
+<h3>div<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.div(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">div</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.div(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the scalar division between a Matrix and a value. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = \frac{A}{v}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (allocated internally) is the scalar division between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>value</strong> – A scalar to divide with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the scalar division between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id21">
+<h3>div<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.div(double, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">div</code><span class="sig-paren">(</span>double<em> value</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.div(double, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the scalar division between a Matrix and a value. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = \frac{A}{v}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (passed by parameter) is the scalar division between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>value</strong> – A scalar to divide with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+<li><strong>C</strong> – A Matrix <span class="math notranslate nohighlight">\(C\)</span> to store the scalar division between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the scalar division between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="divi">
+<h3>divi<a class="headerlink" href="#divi" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.divi(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">divi</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.divi(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the in place scalar division between a Matrix and a value. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A = A - v\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is the in place scalar division between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>value</strong> – A scalar to divide with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(A\)</span> that is the in place scalar division between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id22">
+<h3>divi<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.divi(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">divi</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.divi(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the in place point wise division between two Matrix. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A = \frac{A}{B}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is the in place point wise division between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>B</strong> – A Matrix <span class="math notranslate nohighlight">\(B\)</span> to divide with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(A\)</span> that is the in place point wise division between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="dot">
+<h3>dot<a class="headerlink" href="#dot" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.dot(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">dot</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.dot(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id23">
+<h3>dot<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.dot(Matrix, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">dot</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.dot(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id24">
+<h3>dot<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.dot(double, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">dot</code><span class="sig-paren">(</span>double<em> value</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.dot(double, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id25">
+<h3>dot<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.dot(double, Matrix, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">dot</code><span class="sig-paren">(</span>double<em> value</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.dot(double, Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="dott">
+<h3>dotT<a class="headerlink" href="#dott" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.dotT(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">dotT</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.dotT(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id26">
+<h3>dotT<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.dotT(Matrix, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">dotT</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.dotT(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id27">
+<h3>dotT<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.dotT(double, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">dotT</code><span class="sig-paren">(</span>double<em> value</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.dotT(double, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id28">
+<h3>dotT<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.dotT(double, Matrix, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">dotT</code><span class="sig-paren">(</span>double<em> value</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.dotT(double, Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="exp">
+<h3>exp<a class="headerlink" href="#exp" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.exp()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">exp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.exp()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id29">
+<h3>exp<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.exp(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">exp</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.exp(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="expi">
+<h3>expi<a class="headerlink" href="#expi" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.expi()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">expi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.expi()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="fill">
+<h3>fill<a class="headerlink" href="#fill" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.fill(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">fill</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.fill(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method fills the Matrix by value. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[\forall (r, c), A_{r,c}=v,\]</div>
+<p>where <span class="math notranslate nohighlight">\(v\)</span> is a value to fill <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>value</strong> – The value to fill the Matrix.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="get">
+<h3>get<a class="headerlink" href="#get" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.get(int)">
+public double <code class="descname">get</code><span class="sig-paren">(</span>int<em> pos</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.get(int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method return a value of the Matrix from pos.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos</strong> – A valid position of the Matrix.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Value of the position pos.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id30">
+<h3>get<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.get(int, int)">
+public double <code class="descname">get</code><span class="sig-paren">(</span>int<em> row</em>, int<em> col</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.get(int, int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method return a value of the Matrix from a position (row, col).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>row</strong> – A valid row of the Matrix.</li>
+<li><strong>col</strong> – A valid col of the Matrix.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Value of the position (row, col).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="getdata">
+<h3>getData<a class="headerlink" href="#getdata" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.getData()">
+public double[] <code class="descname">getData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.getData()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the data that represents the Matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The vector of Matrix values.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="getseparator">
+<h3>getSeparator<a class="headerlink" href="#getseparator" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.getSeparator()">
+public <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getSeparator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.getSeparator()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the separator of the Matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Returns the separator. Default is “;”</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="head">
+<h3>head<a class="headerlink" href="#head" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.head(int, int, String)">
+public void <code class="descname">head</code><span class="sig-paren">(</span>int<em> numRows</em>, int<em> numColumns</em>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a><em> format</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.head(int, int, String)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method prints the Matrix given a maximum number of (numRows, numColumns) and a given format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>numRows</strong> – The maximum number of rows.</li>
+<li><strong>numColumns</strong> – The maximum number of columns.</li>
+<li><strong>format</strong> – The format to print the Matrix.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id31">
+<h3>head<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.head(int, int)">
+public void <code class="descname">head</code><span class="sig-paren">(</span>int<em> numRows</em>, int<em> numColumns</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.head(int, int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method prints the Matrix given a maximum number of (numRows, numColumns) and the format “[%e]”.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>numRows</strong> – The maximum number of rows.</li>
+<li><strong>numColumns</strong> – The maximum number of columns.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id32">
+<h3>head<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.head()">
+public void <code class="descname">head</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.head()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method prints the first 6 lines of the Matrix, or numRows if 6 &gt; numRows.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id33">
+<h3>head<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.head(int)">
+public void <code class="descname">head</code><span class="sig-paren">(</span>int<em> numRows</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.head(int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method prints the first numRows lines of the Matrix, or this.numRows if numRows &gt; this.numRows.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>numRows</strong> – Number of rows to be printed.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="iscolvector">
+<h3>isColVector<a class="headerlink" href="#iscolvector" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.isColVector()">
+public boolean <code class="descname">isColVector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.isColVector()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method tests if a Matrix is a column vector or not.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Returns true if the Matrix is a column vector and false otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="ismatrix">
+<h3>isMatrix<a class="headerlink" href="#ismatrix" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.isMatrix()">
+public boolean <code class="descname">isMatrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.isMatrix()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method tests if a Matrix is a matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Returns true if the Matrix is a matrix and false otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="isrowvector">
+<h3>isRowVector<a class="headerlink" href="#isrowvector" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.isRowVector()">
+public boolean <code class="descname">isRowVector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.isRowVector()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method tests if a Matrix is a row vector or not.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Returns true if the Matrix is a row vector and false otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="isscalar">
+<h3>isScalar<a class="headerlink" href="#isscalar" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.isScalar()">
+public boolean <code class="descname">isScalar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.isScalar()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method tests if a Matrix is a scalar or not.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Returns true if the Matrix is a scalar and false otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="length">
+<h3>length<a class="headerlink" href="#length" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.length()">
+public int <code class="descname">length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.length()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the length of the Matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The length of the Matrix (numRows x numColumns).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="lessthen">
+<h3>lessthen<a class="headerlink" href="#lessthen" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.lessthen(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">lessthen</code><span class="sig-paren">(</span>double<em> t</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.lessthen(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns a binary Matrix of the following comparison:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\forall (r, c), C_{r, c} = \begin{cases} 1,&amp; \text{ if } A_{r, c} &lt; t,\\ 0,&amp; \text{ otherwise }\\ \end{cases}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(t \in \mathbb{R}\)</span> is a threshold and <span class="math notranslate nohighlight">\(C\)</span> is a Matrix passed by parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t</strong> – The value of threshold.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> with the binary comparison.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id34">
+<h3>lessthen<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.lessthen(double, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">lessthen</code><span class="sig-paren">(</span>double<em> t</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.lessthen(double, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns a binary Matrix of the following comparison:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\forall (r, c), C_{r, c} = \begin{cases} 1,&amp; \text{ if } A_{r, c} &lt; t,\\ 0,&amp; \text{ otherwise }\\ \end{cases}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(t \in \mathbb{R}\)</span> is a threshold and <span class="math notranslate nohighlight">\(C\)</span> is a Matrix allocated inside the method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t</strong> – The value of threshold.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> with the binary comparison.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="lesstheni">
+<h3>lesstheni<a class="headerlink" href="#lesstheni" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.lesstheni(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">lesstheni</code><span class="sig-paren">(</span>double<em> t</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.lesstheni(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns a in place binary Matrix of the following comparison:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\forall (r, c), A_{r, c} = \begin{cases} 1,&amp; \text{ if } A_{r, c} &lt; t,\\ 0,&amp; \text{ otherwise }\\ \end{cases}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(t \in \mathbb{R}\)</span> is a threshold.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t</strong> – The value of threshold.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The in place Matrix <span class="math notranslate nohighlight">\(A\)</span> with the binary comparison.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="max">
+<h3>max<a class="headerlink" href="#max" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.max()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">max</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.max()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id35">
+<h3>max<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.max(int)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">max</code><span class="sig-paren">(</span>int<em> axis</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.max(int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id36">
+<h3>max<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.max(double, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">max</code><span class="sig-paren">(</span>double<em> value</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.max(double, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="maxi">
+<h3>maxi<a class="headerlink" href="#maxi" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.maxi(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">maxi</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.maxi(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="mean">
+<h3>mean<a class="headerlink" href="#mean" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.mean()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">mean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.mean()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id37">
+<h3>mean<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.mean(int, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">mean</code><span class="sig-paren">(</span>int<em> axis</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.mean(int, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id38">
+<h3>mean<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.mean(int)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">mean</code><span class="sig-paren">(</span>int<em> axis</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.mean(int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="min">
+<h3>min<a class="headerlink" href="#min" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.min()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">min</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.min()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id39">
+<h3>min<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.min(int)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">min</code><span class="sig-paren">(</span>int<em> axis</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.min(int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id40">
+<h3>min<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.min(double, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">min</code><span class="sig-paren">(</span>double<em> value</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.min(double, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="minus">
+<h3>minus<a class="headerlink" href="#minus" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.minus(int, int, double)">
+public void <code class="descname">minus</code><span class="sig-paren">(</span>int<em> row</em>, int<em> col</em>, double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.minus(int, int, double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method subtracts the value stored in Matrix position (row, col) by a value passed for parameter. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A_{r,c}=A_{r, c}-v,\]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is the number of rows, <span class="math notranslate nohighlight">\(c\)</span> is the number of columns and <span class="math notranslate nohighlight">\(v\)</span> is the value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>row</strong> – A valid row of the Matrix.</li>
+<li><strong>col</strong> – A valid col of the Matrix.</li>
+<li><strong>value</strong> – A value to subtracts the value stored in (row, col).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id41">
+<h3>minus<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.minus(int, double)">
+public void <code class="descname">minus</code><span class="sig-paren">(</span>int<em> pos</em>, double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.minus(int, double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method subtracts the value stored in Matrix position (row, col) by a value passed for parameter. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A_{r,c}=A_{r, c}-v,\]</div>
+<p>where <span class="math notranslate nohighlight">\(r=\lfloor \frac{pos}{m} \rfloor\)</span> is the number of rows and <span class="math notranslate nohighlight">\(c=(pos\equiv m)\)</span> is the number of columns.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pos</strong> – A valid position of the Matrix.</li>
+<li><strong>value</strong> – A value to subtracts the value stored in (row, col).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id42">
+<h3>minus<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.minus(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">minus</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.minus(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the point wise subtraction between two Matrix. It is computed natively if Options.operations = Operations.NATIVE and <span class="math notranslate nohighlight">\(B\)</span> is not a scalar, and no native otherwise. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = A - B\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (allocated internally) is the point wise subtraction between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>B</strong> – A Matrix <span class="math notranslate nohighlight">\(B\)</span> to subtract with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the point wise subtraction between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id43">
+<h3>minus<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.minus(Matrix, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">minus</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.minus(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the point wise subtraction between two Matrix. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = A - B\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (passed by parameter) is the point wise subtraction between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>B</strong> – A Matrix <span class="math notranslate nohighlight">\(B\)</span> to subtract with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+<li><strong>C</strong> – A Matrix <span class="math notranslate nohighlight">\(C\)</span> to store the point wise subtraction between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the point wise subtraction between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id44">
+<h3>minus<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.minus(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">minus</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.minus(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the scalar subtraction between a Matrix and a value. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = A - v\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (allocated internally) is the scalar subtraction between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>value</strong> – A scalar to subtract with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the scalar subtraction between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id45">
+<h3>minus<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.minus(double, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">minus</code><span class="sig-paren">(</span>double<em> value</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.minus(double, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the scalar subtraction between a Matrix and a value. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = A - v\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (passed by parameter) is the scalar subtraction between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>value</strong> – A scalar to subtract with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+<li><strong>C</strong> – A Matrix <span class="math notranslate nohighlight">\(C\)</span> to store the scalar subtraction between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the scalar subtraction between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="minusi">
+<h3>minusi<a class="headerlink" href="#minusi" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.minusi(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">minusi</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.minusi(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the in place point wise subtraction between two Matrix. It is computed natively if Options.operations = Operations.NATIVE and <span class="math notranslate nohighlight">\(B\)</span> is not a scalar, and no native otherwise. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A = A - B\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is the in place point wise subtraction between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>B</strong> – A Matrix <span class="math notranslate nohighlight">\(B\)</span> to subtract with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(A\)</span> that is the in place point wise subtraction between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id46">
+<h3>minusi<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.minusi(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">minusi</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.minusi(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the in place scalar subtraction between a Matrix and a value. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A = A - v\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is the in place scalar subtraction between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>value</strong> – A scalar to subtract with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(A\)</span> that is the in place scalar subtraction between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="mul">
+<h3>mul<a class="headerlink" href="#mul" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.mul(int, int, double)">
+public void <code class="descname">mul</code><span class="sig-paren">(</span>int<em> row</em>, int<em> col</em>, double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.mul(int, int, double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method multiplies the value stored in Matrix position (row, col) by a value passed for parameter. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A_{r,c}=A_{r, c}*v,\]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is the number of rows, <span class="math notranslate nohighlight">\(c\)</span> is the number of columns and <span class="math notranslate nohighlight">\(v\)</span> is the value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>row</strong> – A valid row of the Matrix.</li>
+<li><strong>col</strong> – A valid col of the Matrix.</li>
+<li><strong>value</strong> – A value to multiplies the value stored in (row, col).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id47">
+<h3>mul<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.mul(int, double)">
+public void <code class="descname">mul</code><span class="sig-paren">(</span>int<em> pos</em>, double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.mul(int, double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method multiplies the value stored in Matrix position (row, col) by a value passed for parameter. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A_{r,c}=A_{r, c}*v,\]</div>
+<p>where <span class="math notranslate nohighlight">\(r=\lfloor \frac{pos}{m} \rfloor\)</span> is the number of rows and <span class="math notranslate nohighlight">\(c=(pos\equiv m)\)</span> is the number of columns.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pos</strong> – A valid position of the Matrix.</li>
+<li><strong>value</strong> – A value to multiplies the value stored in (row, col).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id48">
+<h3>mul<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.mul(Matrix, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">mul</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.mul(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the point wise multiplication between two Matrix. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = A * B\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (passes by parameter) is the point wise multiplication between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>B</strong> – A Matrix <span class="math notranslate nohighlight">\(B\)</span> to multiplies with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+<li><strong>C</strong> – A Matrix <span class="math notranslate nohighlight">\(C\)</span> to store <span class="math notranslate nohighlight">\(A*B\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the point wise multiplication between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id49">
+<h3>mul<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.mul(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">mul</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.mul(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the point wise multiplication between two Matrix. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = A * B\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (allocated internally) is the point wise multiplication between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>B</strong> – A Matrix <span class="math notranslate nohighlight">\(B\)</span> to multiplies with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+<li><strong>C</strong> – A Matrix <span class="math notranslate nohighlight">\(C\)</span> to store <span class="math notranslate nohighlight">\(A*B\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the point wise multiplication between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id50">
+<h3>mul<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.mul(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">mul</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.mul(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the scalar multiplication between two <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = A * v\]</div>
+<p>where <span class="math notranslate nohighlight">\(v\)</span> is a value and <span class="math notranslate nohighlight">\(C\)</span> (allocated internally) is the scalar multiplication between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>value</strong> – A value to multiplies with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the scalar multiplication between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id51">
+<h3>mul<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.mul(double, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">mul</code><span class="sig-paren">(</span>double<em> value</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.mul(double, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the scalar multiplication between two <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = A * v\]</div>
+<p>where <span class="math notranslate nohighlight">\(v\)</span> is a value and <span class="math notranslate nohighlight">\(C\)</span> (passed by parameter) is the scalar multiplication between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>value</strong> – A value to multiplies with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+<li><strong>C</strong> – A Matrix <span class="math notranslate nohighlight">\(C\)</span> to store <span class="math notranslate nohighlight">\(A*v\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is scalar multiplication between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="muli">
+<h3>muli<a class="headerlink" href="#muli" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.muli(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">muli</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.muli(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the in place point wise multiplication between two Matrix. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A = A * B\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>B</strong> – A Matrix <span class="math notranslate nohighlight">\(B\)</span> to multiplies with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(A\)</span> that is the in place point wise multiplication between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id52">
+<h3>muli<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.muli(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">muli</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.muli(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the in place scalar multiplication between two <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A = A * v\]</div>
+<p>where <span class="math notranslate nohighlight">\(v\)</span> is a value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>value</strong> – A value to multiplies with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(A\)</span> that is the in place scalar multiplication between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="neg">
+<h3>neg<a class="headerlink" href="#neg" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.neg(int, int)">
+public void <code class="descname">neg</code><span class="sig-paren">(</span>int<em> row</em>, int<em> col</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.neg(int, int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method negates the value stored in Matrix position (row, col). This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A_{r,c}=A_{r, c}*-1,\]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is the number of rows and <span class="math notranslate nohighlight">\(c\)</span> is the number of columns.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>row</strong> – A valid row of the Matrix.</li>
+<li><strong>col</strong> – A valid col of the Matrix.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id53">
+<h3>neg<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.neg(int)">
+public void <code class="descname">neg</code><span class="sig-paren">(</span>int<em> pos</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.neg(int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method negates the value stored in Matrix position (row, col). This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A_{r,c}=A_{r, c}*-1,\]</div>
+<p>where <span class="math notranslate nohighlight">\(r=\lfloor \frac{pos}{m} \rfloor\)</span> is the number of rows and <span class="math notranslate nohighlight">\(c=(pos\equiv m)\)</span> is the number of columns.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pos</strong> – A valid position of the Matrix.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id54">
+<h3>neg<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.neg()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">neg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.neg()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id55">
+<h3>neg<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.neg(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">neg</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.neg(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="negi">
+<h3>negi<a class="headerlink" href="#negi" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.negi()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">negi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.negi()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="numcolumns">
+<h3>numColumns<a class="headerlink" href="#numcolumns" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.numColumns()">
+public int <code class="descname">numColumns</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.numColumns()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the number of columns of the Matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The number of columns of the Matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id56">
+<h3>numColumns<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.numColumns(int)">
+public void <code class="descname">numColumns</code><span class="sig-paren">(</span>int<em> numColumns</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.numColumns(int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method sets the number of columns of the Matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>numColumns</strong> – The number of columns of the Matrix.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="numrows">
+<h3>numRows<a class="headerlink" href="#numrows" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.numRows()">
+public int <code class="descname">numRows</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.numRows()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the number of rows of the Matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The number of rows of the Matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id57">
+<h3>numRows<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.numRows(int)">
+public void <code class="descname">numRows</code><span class="sig-paren">(</span>int<em> numRows</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.numRows(int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method sets the number of rows of the Matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>numRows</strong> – The number of rows of the Matrix.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="one">
+<h3>one<a class="headerlink" href="#one" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.one()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">one</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.one()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method fills the Matrix with 1s. This method implements the following operation: <span class="math notranslate nohighlight">\(\forall (r, c), A_{r,c}=1\)</span></p>
+</dd></dl>
+
+</div>
+<div class="section" id="ones">
+<h3>ones<a class="headerlink" href="#ones" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.ones(int, int)">
+public static <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">ones</code><span class="sig-paren">(</span>int<em> numRows</em>, int<em> numColumns</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.ones(int, int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="plus">
+<h3>plus<a class="headerlink" href="#plus" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.plus(int, int, double)">
+public void <code class="descname">plus</code><span class="sig-paren">(</span>int<em> row</em>, int<em> col</em>, double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.plus(int, int, double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method adds the value stored in Matrix position (row, col) by a value passed for parameter. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A_{r,c}=A_{r, c}+v,\]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is the number of rows, <span class="math notranslate nohighlight">\(c\)</span> is the number of columns and <span class="math notranslate nohighlight">\(v\)</span> is the value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>row</strong> – A valid row of the Matrix.</li>
+<li><strong>col</strong> – A valid col of the Matrix.</li>
+<li><strong>value</strong> – A value to adds the value stored in (row, col).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id58">
+<h3>plus<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.plus(int, double)">
+public void <code class="descname">plus</code><span class="sig-paren">(</span>int<em> pos</em>, double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.plus(int, double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method adds the value stored in Matrix position (row, col) by a value passed for parameter. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A_{r,c}=A_{r, c}+v,\]</div>
+<p>where <span class="math notranslate nohighlight">\(r=\lfloor \frac{pos}{m} \rfloor\)</span> is the number of rows and <span class="math notranslate nohighlight">\(c=(pos\equiv m)\)</span> is the number of columns.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pos</strong> – A valid position of the Matrix.</li>
+<li><strong>value</strong> – A value to adds the value stored in (row, col).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id59">
+<h3>plus<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.plus(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">plus</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.plus(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the point wise summation between two Matrix. It is computed natively if Options.operations = Operations.NATIVE and <span class="math notranslate nohighlight">\(B\)</span> is not a scalar, and no native otherwise. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = A + B\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (allocated internally) is the point wise summation between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>B</strong> – A Matrix <span class="math notranslate nohighlight">\(B\)</span> to sum with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the point wise summation between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id60">
+<h3>plus<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.plus(Matrix, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">plus</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.plus(Matrix, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the in place point wise summation between two Matrix. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = A + B\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is the point wise summation between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>B</strong> – A Matrix <span class="math notranslate nohighlight">\(B\)</span> to sum with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+<li><strong>C</strong> – A Matrix <span class="math notranslate nohighlight">\(C\)</span> to store the point wise summation between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the point wise summation between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id61">
+<h3>plus<a class="headerlink" href="#id61" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.plus(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">plus</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.plus(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the scalar summation between a Matrix and a value. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = A + v\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (allocated internally) is the scalar summation between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>value</strong> – A scalar to sum with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the scalar summation between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id62">
+<h3>plus<a class="headerlink" href="#id62" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.plus(double, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">plus</code><span class="sig-paren">(</span>double<em> value</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.plus(double, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the scalar summation between a Matrix and a value. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[C = A + v\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (passed by parameter) is the scalar summation between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>value</strong> – A scalar to sum with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+<li><strong>C</strong> – A Matrix <span class="math notranslate nohighlight">\(C\)</span> to store the scalar summation between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> that is the scalar summation between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="plusi">
+<h3>plusi<a class="headerlink" href="#plusi" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.plusi(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">plusi</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> B</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.plusi(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the in place point wise summation between two Matrix. It is computed natively if Options.operations = Operations.NATIVE, and no native otherwise. This supports broadcasting operations. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A = A + B\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is the in place point wise summation between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>B</strong> – A Matrix <span class="math notranslate nohighlight">\(B\)</span> to sum with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(A\)</span> that is the in place point wise summation between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id63">
+<h3>plusi<a class="headerlink" href="#id63" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.plusi(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">plusi</code><span class="sig-paren">(</span>double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.plusi(double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the in place scalar summation between a Matrix and a value. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A = A + v\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is the in place scalar summation between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>value</strong> – A scalar to sum with <span class="math notranslate nohighlight">\(A\)</span>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(A\)</span> that is the in place scalar summation between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="pow">
+<h3>pow<a class="headerlink" href="#pow" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.pow(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">pow</code><span class="sig-paren">(</span>double<em> exponent</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.pow(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id64">
+<h3>pow<a class="headerlink" href="#id64" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.pow(double, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">pow</code><span class="sig-paren">(</span>double<em> exponent</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.pow(double, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="pow2">
+<h3>pow2<a class="headerlink" href="#pow2" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.pow2(int, int)">
+public void <code class="descname">pow2</code><span class="sig-paren">(</span>int<em> row</em>, int<em> col</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.pow2(int, int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method squares the value stored in Matrix position (row, col). This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A_{r,c}=A_{r, c}^2,\]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is the number of rows and <span class="math notranslate nohighlight">\(c\)</span> is the number of columns.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>row</strong> – A valid row of the Matrix.</li>
+<li><strong>col</strong> – A valid col of the Matrix.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id65">
+<h3>pow2<a class="headerlink" href="#id65" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.pow2(int)">
+public void <code class="descname">pow2</code><span class="sig-paren">(</span>int<em> pos</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.pow2(int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method squares the value stored in Matrix position (row, col). This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[A_{r,c}=A_{r, c}^2,\]</div>
+<p>where <span class="math notranslate nohighlight">\(r=\lfloor \frac{pos}{m} \rfloor\)</span> is the number of rows and <span class="math notranslate nohighlight">\(c=(pos\equiv m)\)</span> is the number of columns.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pos</strong> – A valid position of the Matrix.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id66">
+<h3>pow2<a class="headerlink" href="#id66" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.pow2()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">pow2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.pow2()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id67">
+<h3>pow2<a class="headerlink" href="#id67" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.pow2(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">pow2</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.pow2(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="pow2i">
+<h3>pow2i<a class="headerlink" href="#pow2i" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.pow2i()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">pow2i</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.pow2i()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="powi">
+<h3>powi<a class="headerlink" href="#powi" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.powi(double)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">powi</code><span class="sig-paren">(</span>double<em> exponent</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.powi(double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="print">
+<h3>print<a class="headerlink" href="#print" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.print()">
+public void <code class="descname">print</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.print()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method prints the Matrix.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="rand">
+<h3>rand<a class="headerlink" href="#rand" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.rand()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">rand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.rand()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id68">
+<h3>rand<a class="headerlink" href="#id68" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.rand(int, int)">
+public static <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">rand</code><span class="sig-paren">(</span>int<em> numRows</em>, int<em> numColumns</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.rand(int, int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="randn">
+<h3>randn<a class="headerlink" href="#randn" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.randn(int, int)">
+public static <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">randn</code><span class="sig-paren">(</span>int<em> numRows</em>, int<em> numColumns</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.randn(int, int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="randnorm">
+<h3>randnorm<a class="headerlink" href="#randnorm" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.randnorm()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">randnorm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.randnorm()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="row">
+<h3>row<a class="headerlink" href="#row" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.row(int)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">row</code><span class="sig-paren">(</span>int<em> row</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.row(int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns a given row of the Matrix. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[\forall c=1,\ldots,n,~ C_{1,c}=A_{r,c},\]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is the row and <span class="math notranslate nohighlight">\(C\)</span> is a Matrix allocated inside the method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>row</strong> – A row of <span class="math notranslate nohighlight">\(A\)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A row Matrix (or a vector) of a given row.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id69">
+<h3>row<a class="headerlink" href="#id69" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.row(int, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">row</code><span class="sig-paren">(</span>int<em> row</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.row(int, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns a given row of the Matrix, but it writes the values in the Matrix <span class="math notranslate nohighlight">\(C\)</span>. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[\forall c=1,\ldots,n,~ C_{r,c}=A_{r,c},\]</div>
+<p>where <span class="math notranslate nohighlight">\(1\leq r\leq m\)</span> is the row and <span class="math notranslate nohighlight">\(C\)</span> is a Matrix passed by parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>row</strong> – A row of <span class="math notranslate nohighlight">\(A\)</span></li>
+<li><strong>C</strong> – A Matrix to store the row of <span class="math notranslate nohighlight">\(A\)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> filled by the given row of <span class="math notranslate nohighlight">\(A\)</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="set">
+<h3>set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.set(int, double)">
+public void <code class="descname">set</code><span class="sig-paren">(</span>int<em> pos</em>, double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.set(int, double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method sets a value of the Matrix from a position pos.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pos</strong> – A valid position of the Matrix.</li>
+<li><strong>value</strong> – A value to be stored in pos.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id70">
+<h3>set<a class="headerlink" href="#id70" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.set(int, int, double)">
+public void <code class="descname">set</code><span class="sig-paren">(</span>int<em> row</em>, int<em> col</em>, double<em> value</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.set(int, int, double)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method sets a value of the Matrix from a position (row, col).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>row</strong> – A valid row of the Matrix.</li>
+<li><strong>col</strong> – A valid col of the Matrix.</li>
+<li><strong>value</strong> – A value to be stored in (row, col).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="setdata">
+<h3>setData<a class="headerlink" href="#setdata" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.setData(double[])">
+public void <code class="descname">setData</code><span class="sig-paren">(</span>double[]<em> data</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.setData(double[])" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method sets the data that represents the Matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> – A vector of doubles.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="setseparator">
+<h3>setSeparator<a class="headerlink" href="#setseparator" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.setSeparator(String)">
+public void <code class="descname">setSeparator</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a><em> separator</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.setSeparator(String)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method sets the separator of the Matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>separator</strong> – A String separator useful to save store a Matrix as a file.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="shape">
+<h3>shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.shape()">
+public <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">shape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.shape()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns a string with the shape of the Matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Returns (numRows, numColumns)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="sigmoid">
+<h3>sigmoid<a class="headerlink" href="#sigmoid" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.sigmoid(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">sigmoid</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.sigmoid(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="sigmoidi">
+<h3>sigmoidi<a class="headerlink" href="#sigmoidi" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.sigmoidi()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">sigmoidi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.sigmoidi()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="sqrt">
+<h3>sqrt<a class="headerlink" href="#sqrt" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.sqrt()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">sqrt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.sqrt()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id71">
+<h3>sqrt<a class="headerlink" href="#id71" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.sqrt(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">sqrt</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.sqrt(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="sqrti">
+<h3>sqrti<a class="headerlink" href="#sqrti" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.sqrti()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">sqrti</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.sqrti()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="std">
+<h3>std<a class="headerlink" href="#std" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.std(int, int)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">std</code><span class="sig-paren">(</span>int<em> axis</em>, int<em> d</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.std(int, int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="sum">
+<h3>sum<a class="headerlink" href="#sum" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.sum()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">sum</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.sum()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the sum of all elements of the Matrix. It is computed natively if Options.operations = Operations.NATIVE, and no native otherwise. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[s = \sum_{r=1}^m\sum_{c=1}^nA_{r, c}\]</div>
+<p>where <span class="math notranslate nohighlight">\(s\)</span> is the sum of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The Matrix <span class="math notranslate nohighlight">\(C\)</span> of the sum of all elements of <span class="math notranslate nohighlight">\(A\)</span></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id72">
+<h3>sum<a class="headerlink" href="#id72" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.sum(int)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">sum</code><span class="sig-paren">(</span>int<em> axis</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.sum(int)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the sum of all elements of the Matrix of a given axis. It is computed natively if Options.operations = Operations.NATIVE, and no native otherwise. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align} C_{1, c} &amp;= \sum_{r=1}^mA_{r, c}, 1\leq c \leq n, \text{ if } axis=0\\ C_{r, 1} &amp;= \sum_{c=1}^nA_{r, c}, 1\leq r \leq m, \text{ if } axis=1 \end{align}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (allocated internally) is the sum of a given axis of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>axis</strong> – A valid axis, 0 or 1.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> the sum of a given axis of <span class="math notranslate nohighlight">\(A\)</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id73">
+<h3>sum<a class="headerlink" href="#id73" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.sum(int, Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">sum</code><span class="sig-paren">(</span>int<em> axis</em>, <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.sum(int, Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method returns the sum of all elements of the Matrix of a given axis. It is computed natively if Options.operations = Operations.NATIVE, and no native otherwise. This method implements the following operation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align} C_{1, c} &amp;= \sum_{r=1}^mA_{r, c}, 1\leq c \leq n, \text{ if } axis=0\\ C_{r, 1} &amp;= \sum_{c=1}^nA_{r, c}, 1\leq r \leq m, \text{ if } axis=1 \end{align}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> (passed by parameter) is the sum of a given axis of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>axis</strong> – A valid axis, 0 or 1.</li>
+<li><strong>A</strong> – Matrix <span class="math notranslate nohighlight">\(C\)</span> to store the sum.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The Matrix <span class="math notranslate nohighlight">\(C\)</span> the sum of a given axis of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="tanh">
+<h3>tanh<a class="headerlink" href="#tanh" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.tanh()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">tanh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.tanh()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="id74">
+<h3>tanh<a class="headerlink" href="#id74" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.tanh(Matrix)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">tanh</code><span class="sig-paren">(</span><a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a><em> C</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.tanh(Matrix)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="tanhi">
+<h3>tanhi<a class="headerlink" href="#tanhi" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.tanhi()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">tanhi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.tanhi()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="tostring">
+<h3>toString<a class="headerlink" href="#tostring" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.toString()">
+public <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">toString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.toString()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method converts the Matrix to a String.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A String that represents the Matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="var">
+<h3>var<a class="headerlink" href="#var" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.var(int, int)">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">var</code><span class="sig-paren">(</span>int<em> axis</em>, int<em> d</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.var(int, int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="zero">
+<h3>zero<a class="headerlink" href="#zero" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.zero()">
+public <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">zero</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.zero()" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method fills the Matrix with 0s. This method implements the following operation: <span class="math notranslate nohighlight">\(\forall (r, c), A_{r,c}=0\)</span></p>
+</dd></dl>
+
+</div>
+<div class="section" id="zeros">
+<h3>zeros<a class="headerlink" href="#zeros" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.models.datastruct.Matrix.zeros(int, int)">
+public static <a class="reference internal" href="#mmlib4j.models.datastruct.Matrix" title="mmlib4j.models.datastruct.Matrix">Matrix</a> <code class="descname">zeros</code><span class="sig-paren">(</span>int<em> numRows</em>, int<em> numColumns</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.models.datastruct.Matrix.zeros(int, int)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="JavaOperations.html" title="previous chapter (use the left arrow)">JavaOperations</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="NativeOperations.html" title="next chapter (use the right arrow)">NativeOperations</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="NativeOperations.html" title="NativeOperations"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="JavaOperations.html" title="JavaOperations"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">mmlib4j-ml 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="package-index.html" >mmlib4j.models.datastruct</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../../../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2019, Charles Ferreira Gobber. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

@@ -9,10 +9,7 @@ import com.github.fommil.netlib.BLAS;
  * 
  * @author Charles Ferreira Gobber
  * @version  0.0.1
- * @since  0.0.1
- * @see AbstractMatrix
- * @see Float32
- * @see Float64  
+ * @since  0.0.1 
  * @see BLAS
  * 
  */
@@ -158,7 +155,6 @@ public class SimpleBlas {
 	 * 
 	 * 	<p>Observation: This operation overwrites the matrix :math:`A`.</p>
 	 * 
-	 *  @param size Size matrix (rows x columns).
 	 *	@param  A A matrix of type double[].
 	 *  @param  B A matrix of type double[].
 	 *	@return A matrix :math:`A = A + B`.
@@ -181,7 +177,6 @@ public class SimpleBlas {
 	 * 
 	 * 	<p>Observation: This operation overwrites the matrix :math:`A`.</p>
 	 * 
-	 *  @param size Size matrix (rows x columns).
 	 *	@param  A A matrix of type double[].
 	 *  @param  B A matrix of type double[].
 	 *	@return A matrix :math:`A = A - B`.

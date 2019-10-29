@@ -14,7 +14,7 @@ public class DataWriter{
 	private String separator = ";";	
 	private PrintWriter output;
 	
-	public void create(String fileName) {
+	public DataWriter create(String fileName) {
 		
 		try {			
 			output = new PrintWriter( new FileOutputStream( new File(fileName + extension) ) );			
@@ -22,19 +22,24 @@ public class DataWriter{
 			e.printStackTrace();			
 		}	
 		
+		return this;
+		
 	}
 	
-	public void write(Matrix sample) {		
+	public DataWriter write(Matrix sample) {		
 		sample.setSeparator(separator);
-		output.println(sample.toString());		
+		output.println(sample.toString());
+		return this;
 	}
 	
-	public void write(String line) {		
-		output.println(line);		
+	public DataWriter write(String line) {		
+		output.println(line);
+		return this;
 	}
 	
-	public void close() {		
-		output.close();		
+	public DataWriter close() {		
+		output.close();
+		return this;
 	}
 
 	public String getExtension() {
@@ -45,12 +50,14 @@ public class DataWriter{
 		return separator;
 	}
 	
-	public void setSeparator(String separator) {
+	public DataWriter setSeparator(String separator) {
 		this.separator = separator;
+		return this;
 	}
 	
-	public void setExtension(String extension) {
+	public DataWriter setExtension(String extension) {
 		this.extension = extension;
+		return this;
 	}
 	
 }

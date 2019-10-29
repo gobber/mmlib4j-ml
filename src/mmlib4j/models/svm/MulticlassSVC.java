@@ -24,6 +24,8 @@ public class MulticlassSVC extends SVC {
 	private Matrix intercepts;
 	private int[] classes;
 	
+	public MulticlassSVC() {}
+	
 	public MulticlassSVC(JsonObject jsonObject) {
 		load(jsonObject);
 	}

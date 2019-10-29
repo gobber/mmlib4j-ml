@@ -22,6 +22,8 @@ public final class BinarySVC extends SVC {
     private Matrix coefficients;    
     private Kernel K;
     private Classifier classifier;
+    
+    public BinarySVC() {}
 	
 	public BinarySVC(JsonObject jsonObject) {
 		load(jsonObject);

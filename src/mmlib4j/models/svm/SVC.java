@@ -13,7 +13,7 @@ public class SVC implements Models {
 
 	private SVC svc; 
 	
-	SVC(){}
+	public SVC(){}
 	
 	public SVC(JsonObject jsonObject) {
 		load(jsonObject);

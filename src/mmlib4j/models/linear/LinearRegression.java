@@ -13,12 +13,14 @@ import mmlib4j.models.datastruct.Matrix;
 import mmlib4j.models.preprocessing.Scaler;
 import mmlib4j.models.preprocessing.ScalerFactory;
 
-public class LinearRegression implements Models{		 
+public class LinearRegression implements Models {		 
 		
 	private Matrix coefficients;
 	private Matrix intercept;
 	private Regression regression;	
 	private Scaler scaler;
+	
+	public LinearRegression(){}
 	
 	public LinearRegression(JsonObject jsonObject) {
 		load(jsonObject);
@@ -72,6 +74,6 @@ public class LinearRegression implements Models{
 			return intercept;
 		}
 		
-	} 
+	}
 	
 }

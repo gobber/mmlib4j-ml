@@ -25,14 +25,14 @@ public class ScalerFactory {
 	
 	public static Scaler create(JsonObject jsonObject){
 		Scaler scaler;
-		String type = jsonObject.get("type").getAsString();		
-		if(type.contains("ZscoreScaler")) {  
+		String typeScaler = jsonObject.get("scaler").getAsString();		
+		if(typeScaler.equals("ZscoreScaler")) {  
         	scaler = new Zscore(jsonObject);
-        } else if(type.contains("StandardDeviationScaler")){
+        } else if(typeScaler.equals("StandardDeviationScaler")){
         	scaler = new StandardDeviation(jsonObject);        	
-        } else if(type.contains("MeanScaler")) {
+        } else if(typeScaler.equals("MeanScaler")) {
         	scaler = new Mean(jsonObject);
-        }else if(type.contains("MinMaxScaler")){
+        }else if(typeScaler.equals("MinMaxScaler")){
         	scaler = new MinMax(jsonObject);
         } else {
         	scaler = new IdentityScaler();

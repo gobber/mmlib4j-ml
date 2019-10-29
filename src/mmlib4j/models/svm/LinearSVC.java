@@ -23,7 +23,9 @@ public class LinearSVC implements Models {
     private PostProcessing post;
     private Matrix coefficients;
     private Matrix intercepts;
-    private Scaler scaler;    
+    private Scaler scaler;   
+    
+    public LinearSVC() {}
     
 	public LinearSVC(JsonObject jsonObject) {
 		load(jsonObject);

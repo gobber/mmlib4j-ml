@@ -28,6 +28,8 @@ public class LogisticRegression implements Models {
 	private Transfer transfer;
 	private Scaler scaler;
 	
+	public LogisticRegression(){}
+	
 	public LogisticRegression(JsonObject jsonObject) {
 		load(jsonObject);
 	}

@@ -78,7 +78,7 @@ public class Zscore implements Scaler {
         return this;
 	}
 	
-	public Zscore load(JsonObject jsonObject) {	    
+	public Zscore load(JsonObject jsonObject) {		
 		this.statistics = new Gson().fromJson(jsonObject, Statistics.class);			
         this.mean = new Matrix(statistics.mean, 1, statistics.mean.length, false);
         this.std = new Matrix(statistics.std, 1, statistics.std.length, false);        
@@ -88,7 +88,7 @@ public class Zscore implements Scaler {
 	@Override
 	public Matrix normalize(Matrix x) {		
 		this.mean = this.mean == null ? x.mean(0)   : this.mean;
-		this.std  = this.std  == null ? x.std(0, 1) : this.std;		
+		this.std  = this.std  == null ? x.std(0, 1) : this.std;
 		//x.minus(mean).divi(std).print();		
 		return x.minus(mean).divi(std);				
 	}

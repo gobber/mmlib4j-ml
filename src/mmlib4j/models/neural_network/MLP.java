@@ -28,6 +28,8 @@ public class MLP implements Models {
 	private Scaler scaler;
 	private Network net;
 	
+	public MLP(){}
+	
 	public MLP(JsonObject jsonObject) {
 		load(jsonObject);
 	}

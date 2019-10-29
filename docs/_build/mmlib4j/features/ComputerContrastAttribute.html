@@ -1,0 +1,426 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>ComputerContrastAttribute &#8212; mmlib4j-ml 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">mmlib4j-ml 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar"><a href="
+    ../../index.html" class="text-logo">mmlib4j-ml 0.0.1 documentation</a>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../debug/package-index.html">mmlib4j.debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/package-index.html">mmlib4j.files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/package-index.html">mmlib4j.models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/datastruct/package-index.html">mmlib4j.models.datastruct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/linear/package-index.html">mmlib4j.models.linear</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/neural_network/package-index.html">mmlib4j.models.neural_network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/postprocessing/package-index.html">mmlib4j.models.postprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/preprocessing/package-index.html">mmlib4j.models.preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/svm/package-index.html">mmlib4j.models.svm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/svm/kernels/package-index.html">mmlib4j.models.svm.kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/svr/package-index.html">mmlib4j.models.svr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/transfer/package-index.html">mmlib4j.models.transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../options/package-index.html">mmlib4j.options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/package-index.html">mmlib4j.utils</a></li>
+</ul>
+
+    
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">ComputerContrastAttribute</a><ul>
+<li><a class="reference internal" href="#fields">Fields</a><ul>
+<li><a class="reference internal" href="#ascendantspaths">ascendantsPaths</a></li>
+<li><a class="reference internal" href="#attr">attr</a></li>
+<li><a class="reference internal" href="#bestnodes">bestNodes</a></li>
+<li><a class="reference internal" href="#delta">delta</a></li>
+<li><a class="reference internal" href="#descendantspaths">descendantsPaths</a></li>
+<li><a class="reference internal" href="#extract">extract</a></li>
+<li><a class="reference internal" href="#img">img</a></li>
+<li><a class="reference internal" href="#mappruning">mapPruning</a></li>
+<li><a class="reference internal" href="#model">model</a></li>
+<li><a class="reference internal" href="#nodesmatching">nodesMatching</a></li>
+<li><a class="reference internal" href="#numnode">numNode</a></li>
+<li><a class="reference internal" href="#predictions">predictions</a></li>
+<li><a class="reference internal" href="#root">root</a></li>
+<li><a class="reference internal" href="#sumattributeofdescpath">sumAttributeOfDescPath</a></li>
+<li><a class="reference internal" href="#threshold">threshold</a></li>
+<li><a class="reference internal" href="#tree">tree</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#constructors">Constructors</a><ul>
+<li><a class="reference internal" href="#id1">ComputerContrastAttribute</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#addattributeinnodes">addAttributeInNodes</a></li>
+<li><a class="reference internal" href="#addattributeinnodesct">addAttributeInNodesCT</a></li>
+<li><a class="reference internal" href="#addattributeinnodestos">addAttributeInNodesToS</a></li>
+<li><a class="reference internal" href="#getattribute">getAttribute</a></li>
+<li><a class="reference internal" href="#getnodesascendantspath">getNodesAscendantsPath</a></li>
+<li><a class="reference internal" href="#getultimatelevelingassociatedindex">getUltimateLevelingAssociatedIndex</a></li>
+<li><a class="reference internal" href="#maxattributedescendantspath">maxAttributeDescendantsPath</a></li>
+<li><a class="reference internal" href="#mergechildren">mergeChildren</a></li>
+<li><a class="reference internal" href="#posprocessing">posProcessing</a></li>
+<li><a class="reference internal" href="#preprocessing">preProcessing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../../search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../../index.html">Docs</a></li>
+              
+              <li>ComputerContrastAttribute</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="computercontrastattribute">
+<h1>ComputerContrastAttribute<a class="headerlink" href="#computercontrastattribute" title="Permalink to this headline">¶</a></h1>
+<dl class="type">
+<dt id="mmlib4j.features.ComputerContrastAttribute">
+public class <code class="descname">ComputerContrastAttribute</code> extends AttributeComputedIncrementally<a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>MMLib4J - Mathematical Morphology Library for Java</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body">Wonder Alexandre Luz Alves</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="section" id="fields">
+<h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ascendantspaths">
+<h3>ascendantsPaths<a class="headerlink" href="#ascendantspaths" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.ascendantsPaths">
+public <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html" title="java.util.ArrayList">ArrayList</a>&lt;NodeLevelSets&gt;[] <code class="descname">ascendantsPaths</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.ascendantsPaths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="attr">
+<h3>attr<a class="headerlink" href="#attr" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.attr">
+ <a class="reference internal" href="ComputerContrastAttribute-ContrastAttribute.html#mmlib4j.features.ComputerContrastAttribute.ContrastAttribute" title="mmlib4j.features.ComputerContrastAttribute.ContrastAttribute">ContrastAttribute</a> <code class="descname">attr</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.attr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="bestnodes">
+<h3>bestNodes<a class="headerlink" href="#bestnodes" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.bestNodes">
+public SimpleLinkedList&lt;NodeCT&gt; <code class="descname">bestNodes</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.bestNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="delta">
+<h3>delta<a class="headerlink" href="#delta" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.delta">
+ int <code class="descname">delta</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.delta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="descendantspaths">
+<h3>descendantsPaths<a class="headerlink" href="#descendantspaths" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.descendantsPaths">
+public <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html" title="java.util.ArrayList">ArrayList</a>&lt;NodeLevelSets&gt;[] <code class="descname">descendantsPaths</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.descendantsPaths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="extract">
+<h3>extract<a class="headerlink" href="#extract" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.extract">
+public <a class="reference internal" href="ExtractFeatures.html#mmlib4j.features.ExtractFeatures" title="mmlib4j.features.ExtractFeatures">ExtractFeatures</a> <code class="descname">extract</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.extract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="img">
+<h3>img<a class="headerlink" href="#img" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.img">
+ GrayScaleImage <code class="descname">img</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.img" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="mappruning">
+<h3>mapPruning<a class="headerlink" href="#mappruning" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.mapPruning">
+ boolean <code class="descname">mapPruning</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.mapPruning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="model">
+<h3>model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.model">
+public <a class="reference internal" href="../models/Models.html#mmlib4j.models.Models" title="mmlib4j.models.Models">Models</a> <code class="descname">model</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="nodesmatching">
+<h3>nodesMatching<a class="headerlink" href="#nodesmatching" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.nodesMatching">
+public double <code class="descname">nodesMatching</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.nodesMatching" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="numnode">
+<h3>numNode<a class="headerlink" href="#numnode" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.numNode">
+ int <code class="descname">numNode</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.numNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="predictions">
+<h3>predictions<a class="headerlink" href="#predictions" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.predictions">
+ double <code class="descname">predictions</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.predictions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="root">
+<h3>root<a class="headerlink" href="#root" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.root">
+ NodeLevelSets <code class="descname">root</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.root" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="sumattributeofdescpath">
+<h3>sumAttributeOfDescPath<a class="headerlink" href="#sumattributeofdescpath" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.sumAttributeOfDescPath">
+ double[] <code class="descname">sumAttributeOfDescPath</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.sumAttributeOfDescPath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="threshold">
+<h3>threshold<a class="headerlink" href="#threshold" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.threshold">
+ double <code class="descname">threshold</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.threshold" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="tree">
+<h3>tree<a class="headerlink" href="#tree" title="Permalink to this headline">¶</a></h3>
+<dl class="field">
+<dt id="mmlib4j.features.ComputerContrastAttribute.tree">
+ ComponentTree <code class="descname">tree</code><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.tree" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+<div class="section" id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>ComputerContrastAttribute<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="constructor">
+<dt id="mmlib4j.features.ComputerContrastAttribute.ComputerContrastAttribute(int, NodeLevelSets, GrayScaleImage, boolean[], int, Models, ComponentTree, double)">
+public <code class="descname">ComputerContrastAttribute</code><span class="sig-paren">(</span>int<em> numNode</em>, NodeLevelSets<em> root</em>, GrayScaleImage<em> img</em>, boolean[]<em> mapPruning</em>, int<em> delta</em>, <a class="reference internal" href="../models/Models.html#mmlib4j.models.Models" title="mmlib4j.models.Models">Models</a><em> model</em>, ComponentTree<em> tree</em>, double<em> threshold</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.ComputerContrastAttribute(int, NodeLevelSets, GrayScaleImage, boolean[], int, Models, ComponentTree, double)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="addattributeinnodes">
+<h3>addAttributeInNodes<a class="headerlink" href="#addattributeinnodes" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.features.ComputerContrastAttribute.addAttributeInNodes(NodeLevelSets)">
+public void <code class="descname">addAttributeInNodes</code><span class="sig-paren">(</span>NodeLevelSets<em> node</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.addAttributeInNodes(NodeLevelSets)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="addattributeinnodesct">
+<h3>addAttributeInNodesCT<a class="headerlink" href="#addattributeinnodesct" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.features.ComputerContrastAttribute.addAttributeInNodesCT(HashSet)">
+public void <code class="descname">addAttributeInNodesCT</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html" title="java.util.HashSet">HashSet</a>&lt;NodeCT&gt;<em> hashSet</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.addAttributeInNodesCT(HashSet)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="addattributeinnodestos">
+<h3>addAttributeInNodesToS<a class="headerlink" href="#addattributeinnodestos" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.features.ComputerContrastAttribute.addAttributeInNodesToS(HashSet)">
+public void <code class="descname">addAttributeInNodesToS</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html" title="java.util.HashSet">HashSet</a>&lt;NodeToS&gt;<em> hashSet</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.addAttributeInNodesToS(HashSet)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="getattribute">
+<h3>getAttribute<a class="headerlink" href="#getattribute" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.features.ComputerContrastAttribute.getAttribute()">
+public <a class="reference internal" href="ComputerContrastAttribute-ContrastAttribute.html#mmlib4j.features.ComputerContrastAttribute.ContrastAttribute" title="mmlib4j.features.ComputerContrastAttribute.ContrastAttribute">ContrastAttribute</a>[] <code class="descname">getAttribute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.getAttribute()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="getnodesascendantspath">
+<h3>getNodesAscendantsPath<a class="headerlink" href="#getnodesascendantspath" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.features.ComputerContrastAttribute.getNodesAscendantsPath(NodeLevelSets)">
+public <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html" title="java.util.ArrayList">ArrayList</a>&lt;NodeLevelSets&gt; <code class="descname">getNodesAscendantsPath</code><span class="sig-paren">(</span>NodeLevelSets<em> node</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.getNodesAscendantsPath(NodeLevelSets)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="getultimatelevelingassociatedindex">
+<h3>getUltimateLevelingAssociatedIndex<a class="headerlink" href="#getultimatelevelingassociatedindex" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.features.ComputerContrastAttribute.getUltimateLevelingAssociatedIndex()">
+public GrayScaleImage <code class="descname">getUltimateLevelingAssociatedIndex</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.getUltimateLevelingAssociatedIndex()" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="maxattributedescendantspath">
+<h3>maxAttributeDescendantsPath<a class="headerlink" href="#maxattributedescendantspath" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.features.ComputerContrastAttribute.maxAttributeDescendantsPath(NodeLevelSets, NodeLevelSets)">
+public void <code class="descname">maxAttributeDescendantsPath</code><span class="sig-paren">(</span>NodeLevelSets<em> nodeAsc</em>, NodeLevelSets<em> nodeDes</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.maxAttributeDescendantsPath(NodeLevelSets, NodeLevelSets)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="mergechildren">
+<h3>mergeChildren<a class="headerlink" href="#mergechildren" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.features.ComputerContrastAttribute.mergeChildren(NodeLevelSets, NodeLevelSets)">
+public void <code class="descname">mergeChildren</code><span class="sig-paren">(</span>NodeLevelSets<em> node</em>, NodeLevelSets<em> son</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.mergeChildren(NodeLevelSets, NodeLevelSets)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="posprocessing">
+<h3>posProcessing<a class="headerlink" href="#posprocessing" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.features.ComputerContrastAttribute.posProcessing(NodeLevelSets)">
+public void <code class="descname">posProcessing</code><span class="sig-paren">(</span>NodeLevelSets<em> root</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.posProcessing(NodeLevelSets)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="preprocessing">
+<h3>preProcessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="mmlib4j.features.ComputerContrastAttribute.preProcessing(NodeLevelSets)">
+public void <code class="descname">preProcessing</code><span class="sig-paren">(</span>NodeLevelSets<em> node</em><span class="sig-paren">)</span><a class="headerlink" href="#mmlib4j.features.ComputerContrastAttribute.preProcessing(NodeLevelSets)" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+            
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">mmlib4j-ml 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2019, Charles Ferreira Gobber. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

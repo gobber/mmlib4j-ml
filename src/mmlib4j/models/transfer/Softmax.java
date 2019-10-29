@@ -4,6 +4,8 @@ import mmlib4j.models.datastruct.Matrix;
 
 public class Softmax implements Transfer {
 
+	public Softmax() {}
+	
 	@Override
 	public Matrix activate(Matrix z) {					
 		Matrix max = z.max(1);				

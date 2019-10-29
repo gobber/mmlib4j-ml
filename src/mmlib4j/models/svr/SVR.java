@@ -24,6 +24,8 @@ public class SVR implements Models {
     private Kernel K;
     private Regressor regressor;
     
+    public SVR() {}
+    
 	public SVR(JsonObject jsonObject) {
 		load(jsonObject);
 	}

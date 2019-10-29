@@ -6,7 +6,7 @@ public class Options {
 	
 	public static Operations operations = Operations.NO_NATIVE;
 	
-	// Number of rows to choose to better dot algorithms in some cases
+	// Number of rows to choose to do better dot algorithms in some cases
 	
 	public static int MULT_ROW_SWITCH = 15;
 	
