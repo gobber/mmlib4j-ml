@@ -27,4 +27,4 @@ for a large application the memory re-allocation can be an issue.
 
 ## Documentation
 
-The documentation can be found [here](...).
+The software documentation is in the folder 'docs/_build/index.html'.
