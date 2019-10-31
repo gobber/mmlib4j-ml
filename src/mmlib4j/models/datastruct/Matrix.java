@@ -1219,7 +1219,9 @@ public class Matrix {
 	public Matrix plus(Matrix B){
 		if(B.isScalar()) {
 			return plus(B.get(0), B);
-		}   
+		}  else if(B.isRowVector() || B.isColVector()) {	
+			return JavaOperations.instance.plus(this, B);
+		} 
 		return Options.operations.plus(this, B);
 	}
 	
@@ -1245,7 +1247,9 @@ public class Matrix {
 	public Matrix plusi(Matrix B){
 		if(B.isScalar()) {
 			return plus(B.get(0), this);
-		}    		
+		}  else if(B.isRowVector() || B.isColVector()) {	
+			return plus(B, this);
+		} 
 		return Options.operations.plusi(this, B);
 	}
 	
@@ -1377,6 +1381,11 @@ public class Matrix {
 	 * 
 	 **/
 	public Matrix minus(Matrix B){
+		
+		if(B.isRowVector() || B.isColVector()) {			
+			return JavaOperations.instance.minus(this, B);
+		}
+		
 		return Options.operations.minus(this, B);
 	}
 	
@@ -1402,7 +1411,9 @@ public class Matrix {
 	public Matrix minusi(Matrix B){
 		if(B.isScalar()) {
 			return minus(B.get(0), this);
-		}		
+		} else if(B.isRowVector() || B.isColVector()) {			
+			return minus(B, this);
+		}
 		return Options.operations.minusi(this, B);
 	}
 	

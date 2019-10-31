@@ -84,7 +84,7 @@ public class MLP implements Models {
 	
 	@Override
 	public Matrix predict(Matrix x) {		
-		Matrix a = scaler.normalize(x);
+		Matrix a = scaler.normalize(x);		
 		Matrix z;			
 		for(Layer layer : layers) {
 			z = a.dot(layer.getWeigths()).plusi(layer.getBias());		

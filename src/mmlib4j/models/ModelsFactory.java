@@ -10,8 +10,6 @@ import java.util.Scanner;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import mmlib4j.files.DataWriter;
-import mmlib4j.models.datastruct.Matrix;
 import mmlib4j.models.linear.LinearRegression;
 import mmlib4j.models.linear.LogisticRegression;
 import mmlib4j.models.neural_network.MLP;
@@ -80,16 +78,5 @@ public class ModelsFactory {
 		return model;
 	}
 	
-	public static void main(String args[]) {
-		
-		Models model = ModelsFactory.create("/Users/gobber/Desktop/temp/data.json");		
-		Matrix x = new Matrix(new double[][] {{5.1, 3.5, 1.4, 0.2}, {5.1, 3.5, 1.4, 0.2}});
-		
-		model.predict(x).print();
-		
-		DataWriter dat = new DataWriter();
-		dat.create("/Users/gobber/Desktop/matrix").write(x).close();
-		
-	}
 
 }
